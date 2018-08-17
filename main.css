@@ -1,7 +1,9 @@
 .mainScreen{
+  margin: auto;
   width: 1000px;
   height: 500px;
   position: relative;
+  border: 3px solid red;
   background-image: url('bg.png');
 }
 
@@ -70,7 +72,10 @@
 }
 
 #leveltimer{
+  text-align: center;
   position: absolute;
+  width: 120px;
+  height: 40px;
   bottom: 0px;
   right: 0px;
   background-color: white;
