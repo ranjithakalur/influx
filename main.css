@@ -89,3 +89,9 @@
   background-color: white;
   opacity: 0.4;
 }
+
+.centerMain{
+  position: absolute;
+  margin: auto;
+  padding: 10px;
+}
