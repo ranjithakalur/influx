@@ -1,3 +1,2 @@
 # JsGame
-js game 
-run index.html in the browser.
+run level1.html or level2.html in the browser.
