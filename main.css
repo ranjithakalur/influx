@@ -127,3 +127,9 @@
   background-color: #555;
   color: white;
 }
+
+#gotoHome{
+  position: absolute;
+  top: 0px;
+  padding: 20px;
+}
