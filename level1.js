@@ -4,6 +4,7 @@ var GameSpeed = 150;
 var loc = 300;
 var TimeInSeconds = 90;
 var miss = 5;
+hits = 0;
 var score = 0;
 
 var ss1 = document.getElementById('ss1');
@@ -15,6 +16,7 @@ var ss5 = document.getElementById('ss5');
 var canon = document.getElementById('canon');
 
 var missedQuestions = document.getElementById('missed');
+var nofHits = document.getElementById('hits');
 
 var leveltimer = document.getElementById('leveltimer');
 
@@ -59,6 +61,7 @@ function mainGameLoop() {
       alert("GAME OVER!")
     } else {
       missedQuestions.innerHTML = "Miss: " + miss;
+      nofHits.innerHTML = "HITS: " + hits;
 
       ss1y++;
       ss1.style.top = ss1y + 'px';
@@ -76,6 +79,7 @@ function mainGameLoop() {
 
 function resetSS1(){
   if(ss1sum == canoncontent){
+    hits++;
     ss1y = 0;
     setss1content();
     setcanoncontent();
@@ -88,6 +92,7 @@ function resetSS1(){
 
 function resetSS2(){
   if(ss2sum == canoncontent){
+    hits++;
     ss2y = 0;
     setss2content();
     setcanoncontent();
@@ -100,6 +105,7 @@ function resetSS2(){
 
 function resetSS3(){
   if(ss3sum == canoncontent){
+    hits++;
     ss3y = 0;
     setss3content();
     setcanoncontent();
@@ -112,6 +118,7 @@ function resetSS3(){
 
 function resetSS4(){
   if(ss4sum == canoncontent){
+    hits++;
     ss4y = 0;
     setss4content();
     setcanoncontent();
@@ -124,6 +131,7 @@ function resetSS4(){
 
 function resetSS5(){
   if(ss5sum == canoncontent){
+    hits++;
     ss5y = 0;
     setss5content();
     setcanoncontent();

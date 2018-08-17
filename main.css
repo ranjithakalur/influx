@@ -76,3 +76,11 @@
   background-color: white;
   opacity: 0.4;
 }
+
+#hits{
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  background-color: white;
+  opacity: 0.4;
+}
