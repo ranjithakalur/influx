@@ -55,13 +55,17 @@ function mainGameLoop() {
   }
 
   function frame() {
-    if (ss1y == loc || ss2y == loc || ss3y == loc || ss4y == loc || ss5y == loc || miss<1 || TimeInSeconds<1) {
-      GameOver = "True"
-      clearInterval(id);
-      storeReportVar();
-      newpage("report.html");
-      alert("GAME OVER!" + "\nHits: " + hits + "\nMiss Left: " + miss + "\nScore: " + hits*10);
-    }
+    if (hits*10 == 200) {
+       alert("Congrats!! \nYou completed Level 1");
+	   	 newpage("level2.html");
+
+        if (ss1y == loc || ss2y == loc || ss3y == loc || ss4y == loc || ss5y == loc || miss<1 || TimeInSeconds<1) {
+          GameOver = "True"
+          clearInterval(id);
+          storeReportVar();
+          newpage("report.html");
+          alert("GAME OVER!" + "\nHits: " + hits + "\nMiss Left: " + miss + "\nScore: " + hits*10);
+    } }
     else {
       missedQuestions.innerHTML = "Miss: " + miss;
       nofHits.innerHTML = "<p>HITS: " + hits + "</p><p>Score: " + hits*10 + "</p>";
