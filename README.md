@@ -1,10 +1,43 @@
 # Influx
 #### Influx is a game developed in JavaScript. The UI is created with HTML and CSS.
 
-
 Goal of the game is to develop quick addition and subtraction capabilities in children of the age group 5 to 12.
-
 
 The project can be viewed [Influx](https://ndkshr.github.io/influx).
 
-The project is still under construction!
+####The project is still under construction!
+
+---
+
+## The important things to be achieved.
+* The **report.html** page needs an update.
+  - Display the username, age, score, hits and miss.
+  - Button to proceed to the next level.
+  - Button to go back to the Quit game (use red color or bootstrap danger for the button).
+* The **index.html** needs these updates.
+  - Function for the mute button to funtion.(_Sounds have not been added yet_)
+* #### **GamePlay** updates required:
+  - The gun at the bottom must move to the column of the desired space ship when mouse is clicked on the spac ship (irrespective of right/wrong answer).
+  - The interface objects where the score, hits, miss and time are displayed must be updated.
+
+---
+
+## Important files and expected structure of the project files
+
+Though, all files are inside one folder, they have to be structured. The **index.html** file is the only one expected to be in the root directory of the project.
+
+Each levels should have the same structure but must differ in their problem complexity. The levels are written inside the **levelx . html** (**x** stands for the level number), and it also has a levelx.js file corresponding to it.
+
+##### All the level files html and js and css if any are supposed to be put together in one folder called the *Levels*.
+
+---
+>The redundancies are to be eliminated and the code needs to be improved a lot, _I admit!_
+---
+
+## Instructions for contribution
+
+The contributors are requested to create a new branch and work on that fork instead. Test the working of their branch and then submit a PR request to the master branch.
+
+---
+
+Created and maintained by [@ndkshr](www.ndkshr.ml)

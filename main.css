@@ -1,5 +1,5 @@
 body{
-  padding-top: 65px;
+  padding-top: 50px;
 }
 
 .mainScreen{
@@ -112,7 +112,7 @@ body{
   position: absolute;
   top: 35%;
   left: 50%;
-  font-family:cursive;
+  font-family:verdana;
   transform: translate(-50%, -50%);
   color: white;
 }
