@@ -165,35 +165,35 @@ function setss1content(){
   r1 = Math.floor(Math.random() * 19) + 6;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss1sum = r1 - r2;
-  ss1.innerHTML = r1 + " - " + r2;
+  ss1.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " - " + r2 + "</p>";
 }
 
 function setss2content(){
   r1 = Math.floor(Math.random() * 19) + 6;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss2sum = r1 - r2;
-  ss2.innerHTML = r1 + " - " + r2;
+  ss2.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " - " + r2 + "</p>";
 }
 
 function setss3content(){
   r1 = Math.floor(Math.random() * 19) + 6;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss3sum = r1 - r2;
-  ss3.innerHTML = r1 + " - " + r2;
+  ss3.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " - " + r2 + "</p>";
 }
 
 function setss4content(){
   r1 = Math.floor(Math.random() * 19) + 6;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss4sum = r1 - r2;
-  ss4.innerHTML = r1 + " - " + r2;
+  ss4.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " - " + r2 + "</p>";
 }
 
 function setss5content(){
   r1 = Math.floor(Math.random() * 19) + 6;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss5sum = r1 - r2;
-  ss5.innerHTML = r1 + " - " + r2;
+  ss5.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " - " + r2 + "</p>";
 }
 
 function ifsumcorrect(ss, cc){

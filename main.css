@@ -1,3 +1,7 @@
+body{
+  padding-top: 65px;
+}
+
 .mainScreen{
   margin: auto;
   width: 1000px;
@@ -106,8 +110,9 @@
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
+  font-family:cursive;
   transform: translate(-50%, -50%);
   color: white;
 }

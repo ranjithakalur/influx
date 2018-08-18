@@ -1,6 +1,6 @@
 var GameOver = "False"
 
-var GameSpeed = 150;
+var GameSpeed = 15;
 var loc = 300;
 var TimeInSeconds = 90;
 var miss = 5;
@@ -58,8 +58,11 @@ function mainGameLoop() {
     if (ss1y == loc || ss2y == loc || ss3y == loc || ss4y == loc || ss5y == loc || miss<1 || TimeInSeconds<1) {
       GameOver = "True"
       clearInterval(id);
+      storeReportVar();
+      newpage("report.html");
       alert("GAME OVER!" + "\nHits: " + hits + "\nMiss Left: " + miss + "\nScore: " + hits*10);
-    } else {
+    }
+    else {
       missedQuestions.innerHTML = "Miss: " + miss;
       nofHits.innerHTML = "<p>HITS: " + hits + "</p><p>Score: " + hits*10 + "</p>";
 
@@ -75,6 +78,26 @@ function mainGameLoop() {
       ss5.style.top = ss5y + 'px';
     }
   }
+}
+
+function storeReportVar(){
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    sessionStorage.setItem("miss", miss);
+    sessionStorage.setItem("hits", hits);
+    sessionStorage.setItem("score", hits*10);
+  }
+}
+
+function printReport(){
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    getElementById('report.html/#report').innerHTML = sessionStorage.getItem("score");
+  }
+}
+
+function newpage(pageurl) {
+    window.location.assign(pageurl);
 }
 
 function resetSS1(){
@@ -157,7 +180,7 @@ function setcanoncontent(){
     case 5: canoncontent = ss5sum;
             break;
   }
-  canon.innerHTML = canoncontent;
+  canon.innerHTML = "<p style='color: white;padding-left:46px;'><b>" + canoncontent + "</b></p>";
 }
 
 
@@ -165,35 +188,35 @@ function setss1content(){
   r1 = Math.floor(Math.random() * 25) + 1;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss1sum = r1 + r2;
-  ss1.innerHTML = r1 + " + " + r2;
+  ss1.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " + " + r2 + "</p>";
 }
 
 function setss2content(){
   r1 = Math.floor(Math.random() * 25) + 1;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss2sum = r1 + r2;
-  ss2.innerHTML = r1 + " + " + r2;
+  ss2.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " + " + r2 + "</p>";
 }
 
 function setss3content(){
   r1 = Math.floor(Math.random() * 25) + 1;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss3sum = r1 + r2;
-  ss3.innerHTML = r1 + " + " + r2;
+  ss3.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " + " + r2 + "</p>";
 }
 
 function setss4content(){
   r1 = Math.floor(Math.random() * 25) + 1;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss4sum = r1 + r2;
-  ss4.innerHTML = r1 + " + " + r2;
+  ss4.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " + " + r2 + "</p>";
 }
 
 function setss5content(){
   r1 = Math.floor(Math.random() * 25) + 1;
   r2 = Math.floor(Math.random() * 9) + 1;
   ss5sum = r1 + r2;
-  ss5.innerHTML = r1 + " + " + r2;
+  ss5.innerHTML = "<p style='color: white;padding-top:53px;padding-left:85px;'>" + r1 + " + " + r2 + "</p>";
 }
 
 function ifsumcorrect(ss, cc){
