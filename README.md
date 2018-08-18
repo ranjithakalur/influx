@@ -6,3 +6,5 @@ Goal of the game is to develop quick addition and subtraction capabilities in ch
 
 
 The project can be viewed [Influx](https://ndkshr.github.io/influx).
+
+The project is still under construction!
