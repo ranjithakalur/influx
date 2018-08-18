@@ -1,6 +1,6 @@
 var GameOver = "False"
 
-var GameSpeed = 15;
+var GameSpeed = 150;
 var loc = 300;
 var TimeInSeconds = 90;
 var miss = 5;
