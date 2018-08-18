@@ -55,7 +55,7 @@ function mainGameLoop() {
   }
 
   function frame() {
-    if (hits*10 == 10) {
+    if (hits*10 == 200) {
        alert("Congrats!! \nYou completed Level 1");
 	   	 newpage("level2.html");
 
