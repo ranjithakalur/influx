@@ -3,7 +3,7 @@
 
 sessionStorage.setItem("levelx", 1);
 var GameSpeed = 150;
-var TimeInSeconds = 1;
+var TimeInSeconds = 90;
 
 
 function setcanoncontent(){
