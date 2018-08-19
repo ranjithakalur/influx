@@ -5,11 +5,12 @@ Goal of the game is to develop quick addition and subtraction capabilities in ch
 
 The project can be viewed [Influx](https://ndkshr.github.io/influx).
 
-####The project is still under construction!
+#### The project is still under construction!
 
 ---
 
 ## The important things to be achieved.
+* #### There must be one single page called stage, that acts as a interface/template to all the levels with the game rules written in the levelx.js file for that particular level.
 * The **report.html** page needs an update.
   - Display the username, age, score, hits and miss.
   - Button to proceed to the next level.
