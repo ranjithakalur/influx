@@ -20,6 +20,7 @@ var nofHits = document.getElementById('hits');
 
 var leveltimer = document.getElementById('leveltimer');
 
+
 var ss1y = 0;
 var ss2y = 0;
 var ss3y = 0;
@@ -40,6 +41,7 @@ var ss5content;
 
 var canoncontent;
 
+
 var ssVelocity = 5;
 
 var canon = document.getElementById('canon');
@@ -55,17 +57,18 @@ function mainGameLoop() {
   }
 
   function frame() {
-    if (hits*10 == 200) {
-       alert("Congrats!! \nYou completed Level 1");
-	   	 newpage("level2.html");
+        if(ss1y == loc || ss2y == loc || ss3y == loc || ss4y == loc || ss5y == loc || miss<1 ){
 
-        if (ss1y == loc || ss2y == loc || ss3y == loc || ss4y == loc || ss5y == loc || miss<1 || TimeInSeconds<1) {
-          GameOver = "True"
+          GameOver = "True";
           clearInterval(id);
           storeReportVar();
-          newpage("report.html");
-          alert("GAME OVER!" + "\nHits: " + hits + "\nMiss Left: " + miss + "\nScore: " + hits*10);
-    } }
+          newpage('fail.html');
+        }
+          if (TimeInSeconds<1) {
+            clearInterval(id);
+            storeReportVar();
+            newpage("report.html");
+    }
     else {
       missedQuestions.innerHTML = "Miss: " + miss;
       nofHits.innerHTML = "<p>HITS: " + hits + "</p><p>Score: " + hits*10 + "</p>";
@@ -93,10 +96,14 @@ function storeReportVar(){
   }
 }
 
+
 function printReport(){
   if (typeof(Storage) !== "undefined") {
     // Store
-    getElementById('report.html/#report').innerHTML = sessionStorage.getItem("score");
+    document.getElementById('sco').innerHTML = sessionStorage.getItem("score");
+    document.getElementById('hit').innerHTML = sessionStorage.getItem("hits");
+    document.getElementById('mis').innerHTML = sessionStorage.getItem("miss");
+
   }
 }
 
@@ -104,14 +111,15 @@ function newpage(pageurl) {
     window.location.assign(pageurl);
 }
 
+
 function resetSS1(){
   if(ss1sum == canoncontent){
     hits++;
     ss1y = 0;
     setss1content();
     setcanoncontent();
-    ss1.style.top = ss1y + 'px';}
-
+    ss1.style.top = ss1y + 'px';
+    canon.style.left = 50 + 'px'; }
   else{
     miss--;
   }
@@ -124,6 +132,7 @@ function resetSS2(){
     setss2content();
     setcanoncontent();
     ss1.style.top = ss2y + 'px';
+    canon.style.left = 250 + 'px';
   }
   else{
     miss--;
@@ -137,6 +146,7 @@ function resetSS3(){
     setss3content();
     setcanoncontent();
     ss1.style.top = ss3y + 'px';
+    canon.style.left = 450 + 'px';
   }
   else{
     miss--;
@@ -150,6 +160,7 @@ function resetSS4(){
     setss4content();
     setcanoncontent();
     ss1.style.top = ss4y + 'px';
+    canon.style.left = 650 + 'px';
   }
   else {
     miss--;
@@ -163,6 +174,7 @@ function resetSS5(){
     setss5content();
     setcanoncontent();
     ss1.style.top = ss5y + 'px';
+    canon.style.left = 850 + 'px';
   }
   else {
     miss--
