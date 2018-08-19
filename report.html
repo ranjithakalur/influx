@@ -17,17 +17,30 @@
 
 </head>
 
-<body onload="printReport();">
+<body onload="printReport()">
   <div class="mainScreen">
-    <h1 class="text-center" style="color:white;padding:25px;">Report</h1>
-    <div id="report" style="padding:100px;">
-      
+    <h1 class="text-center">Report</h1>
+    <div id="report" style="padding:40px;">
+
     </div>
     <div id="gotoHome">
       <a href="index.html">
-        <button type="button" class="btn btn-default">Back <span class="glyphicon glyphicon-arrow-left"></span></button>
+        <button type="button" class="btn btn-primary btn-md">Home <span class="glyphicon glyphicon-arrow-left"></span></button>
       </a>
     </div>
+
+    <div id="stats" style="background-color: #4d4543;" class="panel panel-success">
+      <h1 class="text-center" style="color:green;"><b>Congrats!!</b></h1>
+      <h1 class="text-center">Score: <span class="panel-heading" id="sco"></span></h1>
+      <h1 class="text-center">Hits : <span class="panel-heading" id="hit"></span></h1>
+      <h1 class="text-center">Miss : <span class="panel-heading" id="mis"></span></h1>
+    </div>
+
+    <div id="level2but">
+      <a href="level2.html">
+        <button type="button" class="btn btn-success btn-lg">Next level<span class="glyphicon glyphicon-arrow-right"></span></button>
+      </a>
+
   </div>
   <script src="level1.js"></script>
 </body>
