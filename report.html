@@ -30,18 +30,33 @@
     </div>
 
     <div id="stats" style="background-color: #4d4543;" class="panel panel-success">
-      <h1 class="text-center" style="color:green;"><b>Congrats!!</b></h1>
+      <h1 class="text-center"><b id="status">Congrats!!</b></h1>
       <h1 class="text-center">Score: <span class="panel-heading" id="sco"></span></h1>
       <h1 class="text-center">Hits : <span class="panel-heading" id="hit"></span></h1>
       <h1 class="text-center">Miss : <span class="panel-heading" id="mis"></span></h1>
     </div>
 
-    <div id="level2but">
-      <a href="level2.html">
-        <button type="button" class="btn btn-success btn-lg">Next level<span class="glyphicon glyphicon-arrow-right"></span></button>
-      </a>
+    <div id="success-btn-panel">
+      <div id="trybut">
+        <a id="tryagain-link" href="level1.html">
+          <button type="button" class="btn btn-warning btn-lg">Try Again <span class="glyphicon glyphicon-repeat"></span></button>
+        </a>
+      </div>
+      <div id="level2but">
+        <a id="nextlevel-link" href="level2.html">
+          <button type="button" class="btn btn-success btn-lg">Next level <span class="glyphicon glyphicon-arrow-right"></span></button>
+        </a>
+      </div>
+    </div>
 
-  </div>
+    <div id="fail-btn-panel">
+      <div id="trybut">
+        <a href="level1.html">
+          <button type="button" class="btn btn-warning btn-lg">Try Again <span class="glyphicon glyphicon-repeat"></span></button>
+        </a>
+      </div>
+    </div>
+
   <script src="level1.js"></script>
 </body>
 

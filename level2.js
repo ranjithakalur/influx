@@ -1,3 +1,6 @@
+//Level 2 JavaScript
+sessionStorage.setItem("levelx", 2);
+
 var GameOver = "False"
 
 var GameSpeed = 200;
@@ -59,13 +62,13 @@ function mainGameLoop() {
 
           GameOver = "True";
           clearInterval(id);
-          storeReportVar();
-          newpage('fail.html');
+          storeReportVar("Failed!");
+          newpage('report.html');
         }
           if (TimeInSeconds<1) {
             clearInterval(id);
-            storeReportVar();
-            newpage("win.html");
+            storeReportVar("Congrats!");
+            newpage("report.html");
     }
     else {
       missedQuestions.innerHTML = "Miss: " + miss;
@@ -85,23 +88,34 @@ function mainGameLoop() {
   }
   }
 
-  function storeReportVar(){
-  if (typeof(Storage) !== "undefined") {
-    // Store
-    sessionStorage.setItem("miss", miss);
-    sessionStorage.setItem("hits", hits);
-    sessionStorage.setItem("score", hits*10);
-  }
+  function storeReportVar(s){
+    if (typeof(Storage) !== "undefined") {
+      // Store
+      sessionStorage.setItem("miss", miss);
+      sessionStorage.setItem("hits", hits);
+      sessionStorage.setItem("score", hits*10);
+      sessionStorage.setItem("status", s);
+    }
   }
 
   function printReport(){
-  if (typeof(Storage) !== "undefined") {
-    // Store
-    document.getElementById('sco').innerHTML = sessionStorage.getItem("score");
-    document.getElementById('hit').innerHTML = sessionStorage.getItem("hits");
-    document.getElementById('mis').innerHTML = sessionStorage.getItem("miss");
+    if (typeof(Storage) !== "undefined") {
+      // Store
+      document.getElementById('sco').innerHTML = sessionStorage.getItem("score");
+      document.getElementById('hit').innerHTML = sessionStorage.getItem("hits");
+      document.getElementById('mis').innerHTML = sessionStorage.getItem("miss");
+      document.getElementById('status').innerHTML = sessionStorage.getItem("status");
 
-  }
+      if(sessionStorage.getItem("status") == "Congrats!"){
+        document.getElementById("status").style.color = "green";
+        document.getElementById("fail-btn-panel").style.display = "none";
+      }
+      else{
+        document.getElementById("status").style.color = "red";
+        document.getElementById("success-btn-panel").style.display = "none";
+      }
+
+    }
   }
 
   function newpage(pageurl) {
