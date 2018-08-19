@@ -55,11 +55,19 @@ function mainGameLoop() {
   }
 
   function frame() {
-    if (ss1y == loc || ss2y == loc || ss3y == loc || ss4y == loc || ss5y == loc || miss<1 || TimeInSeconds<1) {
-      GameOver = "True"
-      clearInterval(id);
-      alert("GAME OVER!" + "\nHits: " + hits + "\nMiss Left: " + miss + "\nScore: " + hits*10);
-    } else {
+        if(ss1y == loc || ss2y == loc || ss3y == loc || ss4y == loc || ss5y == loc || miss<1 ){
+
+          GameOver = "True";
+          clearInterval(id);
+          storeReportVar();
+          newpage('fail.html');
+        }
+          if (TimeInSeconds<1) {
+            clearInterval(id);
+            storeReportVar();
+            newpage("win.html");
+    }
+    else {
       missedQuestions.innerHTML = "Miss: " + miss;
       nofHits.innerHTML = "<p>HITS: " + hits + "</p><p>Score: " + hits*10 + "</p>";
 
@@ -75,7 +83,32 @@ function mainGameLoop() {
       ss5.style.top = ss5y + 'px';
     }
   }
-}
+  }
+
+  function storeReportVar(){
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    sessionStorage.setItem("miss", miss);
+    sessionStorage.setItem("hits", hits);
+    sessionStorage.setItem("score", hits*10);
+  }
+  }
+
+  function printReport(){
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    document.getElementById('sco').innerHTML = sessionStorage.getItem("score");
+    document.getElementById('hit').innerHTML = sessionStorage.getItem("hits");
+    document.getElementById('mis').innerHTML = sessionStorage.getItem("miss");
+
+  }
+  }
+
+  function newpage(pageurl) {
+    window.location.assign(pageurl);
+  }
+
+
 
 function resetSS1(){
   if(ss1sum == canoncontent){
@@ -83,7 +116,8 @@ function resetSS1(){
     ss1y = 0;
     setss1content();
     setcanoncontent();
-    ss1.style.top = ss1y + 'px';}
+    ss1.style.top = ss1y + 'px';
+    canon.style.left = 50 + 'px';}
 
   else{
     miss--;
@@ -97,6 +131,7 @@ function resetSS2(){
     setss2content();
     setcanoncontent();
     ss1.style.top = ss2y + 'px';
+    canon.style.left = 250 + 'px';
   }
   else{
     miss--;
@@ -110,6 +145,7 @@ function resetSS3(){
     setss3content();
     setcanoncontent();
     ss1.style.top = ss3y + 'px';
+    canon.style.left = 450 + 'px';
   }
   else{
     miss--;
@@ -123,6 +159,7 @@ function resetSS4(){
     setss4content();
     setcanoncontent();
     ss1.style.top = ss4y + 'px';
+    canon.style.left = 650 + 'px';
   }
   else {
     miss--;
@@ -136,6 +173,7 @@ function resetSS5(){
     setss5content();
     setcanoncontent();
     ss1.style.top = ss5y + 'px';
+    canon.style.left = 850 + 'px';
   }
   else {
     miss--
@@ -157,7 +195,7 @@ function setcanoncontent(){
     case 5: canoncontent = ss5sum;
             break;
   }
-  canon.innerHTML = canoncontent;
+  canon.innerHTML = "<p style='color: white;padding-left:46px;'><b>" + canoncontent + "</b></p>";
 }
 
 

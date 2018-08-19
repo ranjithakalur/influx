@@ -2,6 +2,13 @@ body{
   padding-top: 50px;
 }
 
+h1{
+  color:white;
+  padding:2px;
+}
+
+
+
 .mainScreen{
   margin: auto;
   width: 1000px;
@@ -135,6 +142,21 @@ body{
 
 #gotoHome{
   position: absolute;
+  left: 10px;
   top: 0px;
   padding: 20px;
+}
+
+#level2but{
+  position: absolute;
+  right: 0px;
+  top: 80px
+  padding: 20px;
+}
+
+#trybut{
+  position: absolute;
+  text-align: center;
+  top: 440px;
+  left: 440px;
 }
