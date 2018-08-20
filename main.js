@@ -22,6 +22,7 @@ var ss2y = 0;
 var ss3y = 0;
 var ss4y = 0;
 var ss5y = 0;
+var canx = 450;
 
 var ss1sum;
 var ss2sum;
@@ -37,8 +38,7 @@ var ss5content;
 
 var canoncontent;
 
-
-var canon = document.getElementById('canon');
+canon.style.left = canx + 'px';
 
 function mainGameLoop() {
   var id = setInterval(frame, GameSpeed);
