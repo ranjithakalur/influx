@@ -27,3 +27,14 @@ function storeReportVar(s){
     sessionStorage.setItem("status", s);
   }
 }
+
+function changeHrefs(){
+  if (typeof(Storage) !== "undefined"){
+    lno = sessionStorage.getItem('levelx');
+    document.getElementById('tryagain-link').href = "level"+lno+".html";
+    lno++;
+    document.getElementById('nextlevel-link').href = "level"+lno+".html";
+  }
+}
+
+changeHrefs();
