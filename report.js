@@ -1,3 +1,14 @@
+function changeHrefs(){
+  alert('loaded hrefs');
+  if (typeof(Storage) !== "undefined"){
+    lno = sessionStorage.getItem('levelx');
+    document.getElementById('tryagain-link').href = "level"+lno+".html";
+    document.getElementById('tryagainfail-link').href = "level"+lno+".html";
+    lno++;
+    document.getElementById('nextlevel-link').href = "level"+lno+".html";
+  }
+}
+
 function printReport(){
   if (typeof(Storage) !== "undefined") {
     // Store
@@ -27,14 +38,3 @@ function storeReportVar(s){
     sessionStorage.setItem("status", s);
   }
 }
-
-function changeHrefs(){
-  if (typeof(Storage) !== "undefined"){
-    lno = sessionStorage.getItem('levelx');
-    document.getElementById('tryagain-link').href = "level"+lno+".html";
-    lno++;
-    document.getElementById('nextlevel-link').href = "level"+lno+".html";
-  }
-}
-
-changeHrefs();

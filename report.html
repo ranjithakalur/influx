@@ -17,7 +17,7 @@
 
 </head>
 
-<body onload="printReport()">
+<body onload="printReport();changeHrefs();">
   <div class="mainScreen">
     <h1 class="text-center"><b>Report: Level-<script type="text/javascript">document.write(sessionStorage.getItem('levelx'))</script></b></h1>
     <div id="report" style="padding:40px;">
@@ -25,7 +25,7 @@
     </div>
     <div id="gotoHome">
       <a href="index.html">
-        <button type="button" class="btn btn-primary btn-md">Home <span class="glyphicon glyphicon-arrow-left"></span></button>
+        <button type="button" class="btn btn-primary btn-md">Home <span class="glyphicon glyphicon-home"></span></button>
       </a>
     </div>
 
@@ -51,7 +51,7 @@
 
     <div id="fail-btn-panel">
       <div id="trybut">
-        <a id="tryagain-link"><!--Current level-->
+        <a id="tryagainfail-link"><!--Current level-->
           <button type="button" class="btn btn-warning btn-lg">Try Again <span class="glyphicon glyphicon-repeat"></span></button>
         </a>
       </div>
