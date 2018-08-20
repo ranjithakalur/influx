@@ -73,7 +73,16 @@ h1{
   background-image: url('png/can.png');
 }
 
+#fireshot{
+  position: absolute;
+  bottom: 0px;
+  width: 100px;
+  height: 500px;
+  visibility: hidden;
 
+  background-image: url('png/fireshot.png');
+
+}
 
 #missed{
   position: absolute;
