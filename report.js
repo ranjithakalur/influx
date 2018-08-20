@@ -1,5 +1,4 @@
 function changeHrefs(){
-  alert('loaded hrefs');
   if (typeof(Storage) !== "undefined"){
     lno = sessionStorage.getItem('levelx');
     document.getElementById('tryagain-link').href = "level"+lno+".html";
