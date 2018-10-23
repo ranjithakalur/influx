@@ -16,9 +16,6 @@ The project can be viewed [Influx](https://ndkshr.github.io/influx).
   - Button to go back to the Quit game (use red color or bootstrap danger for the button).
 * The **index.html** needs these updates.
   - Function for the mute button to funtion.(_Sounds have not been added yet_)
-* #### **GamePlay** updates required:
-  - Gun animation should be smooth instead of abrupt changes in position(linear transition required)
-
 
 ---
 
